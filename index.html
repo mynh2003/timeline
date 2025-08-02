@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Timeline</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+    <main>
+        <div class="switch-container">
+            <label class="switch">
+                <input type="checkbox" id="toggleSwitch">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="birthday">
+            <div class="birthday-content">
+                <h1 class="title">
+                    <span class="title-main">Happy Birthday</span>
+                </h1>
+                <!-- GIF -->
+                <div id="sticker" class="sticker">
+                    <img src="https://media.tenor.com/_EPyAZ7gZywAAAAi/bubu-kiss-dudu-gif.gif" alt="kiss gif">
+                </div>
+                <div class="birthday-media">
+                    <!-- Cards -->
+                    <div id="media-card-container" class="media-card-container">
+                        <div class="card" data-index="1"><img src="./assets/images/anh1.jpg" alt="Ảnh 1" /></div>
+                        <div class="card" data-index="2"><img src="./assets/images/anh2.jpg" alt="Ảnh 2" /></div>
+                        <div class="card" data-index="3"><img src="./assets/images/anh3.jpg" alt="Ảnh 3" /></div>
+                        <div class="card" data-index="4"><img src="./assets/images/anh4.jpg" alt="Ảnh 4" /></div>
+                    </div>
+                    <!-- Content -->
+                    <div class="media-content">
+                        <p id="typing-text" class="typing"></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="timeline hidden">
+            <h1 class="title">
+                <span class="title-script">The</span>
+                <span class="title-main">DATE</span>
+                <span class="title-script">Timeline</span>
+            </h1>
+
+            <div class="timeline-content">
+                <div class="timeline-item">
+                    <div class="timeline-item-wrapper">
+                        <div class="timeline-time">7:30 PM</div>
+                        <div class="timeline-description"
+                            style="display: flex; justify-content: flex-start; align-items: center; gap: 0.5rem;">Đón em
+                            iu
+                            <svg width="24" height="24" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg"
+                                fill="#e25555">
+                                <path
+                                    d="M50 82s-26-15.3-40-36C-2 30 6 10 25 10c10 0 18 6.8 25 17 7-10.2 15-17 25-17 19 0 27 20 15 36-14 20.7-40 36-40 36z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="timeline-item">
+                    <div class="timeline-item-wrapper">
+                        <div class="timeline-time">8:00 PM</div>
+                        <div class="timeline-description">La Libra Steak</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-item-wrapper">
+                        <div class="timeline-time">10:00 PM</div>
+                        <div class="timeline-description">CAFE</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-item-wrapper">
+                        <div class="timeline-time">11:00 PM</div>
+                        <div class="timeline-description">Over night</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="names">
+                <span class="names-text">Binh Minh & Ninh Hue</span>
+            </div>
+        </div>
+    </main>
+    <script src="./assets/js/main.js" type="module"></script>
+</body>
+
+</html>
