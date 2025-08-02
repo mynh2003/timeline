@@ -41,13 +41,12 @@ function startCardAnimation() {
   
   
 
-  function typeTextEffect(text, elementId, speed) {
+    function typeTextEffect(text, elementId, speed) {
     let i = 0;
     const target = document.getElementById(elementId);
   
     function type() {
       if (i < text.length) {
-        // Nếu gặp </br> thì chèn <br> thay vì gõ từng ký tự
         if (text.slice(i, i + 5) === '</br>') {
           target.innerHTML += '<br>';
           i += 5;
@@ -55,13 +54,17 @@ function startCardAnimation() {
           target.innerHTML += text[i];
           i++;
         }
+  
+        // Cuộn phần tử vào đầu trang liên tục
+        target.scrollIntoView({ behavior: "auto", block: "start" });
+  
         setTimeout(type, speed);
       }
     }
   
     type();
   }
-
+  
   function StartTypingEffect() {
     const target = document.getElementById("typing-text");
     target.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -73,9 +76,10 @@ function startCardAnimation() {
     
     typeTextEffect(content, "typing-text", 40); // tốc độ 40ms mỗi ký tự
   }
-  
+
   function Start() {
     const birthday = document.querySelector('.birthday');
+    const names = birthday.querySelector('.names');
     if (!birthday) return;
 
     const title = birthday.querySelector('.title');
@@ -86,6 +90,7 @@ function startCardAnimation() {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     title?.classList.add('visible');
+                    names?.classList.add('visible');
                     gif?.classList.add('visible');
 
                     setTimeout(() => {
